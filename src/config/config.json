@@ -2,8 +2,10 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "database_development",
+    "database": "manage_student",
     "host": "127.0.0.1",
+    "logging":false,
+    "timezone":"+07:00",
     "dialect": "mysql"
   },
   "test": {

@@ -1,0 +1,32 @@
+-- Chèn dữ liệu vào bảng roles
+INSERT INTO roles (maRole, value)
+VALUES
+    ('admin', 'R1'),
+    ('student', 'R2'),
+    ('staff', 'R3');
+
+-- Chèn dữ liệu vào bảng ToaNha
+INSERT INTO ToaNha (maToaNha, tenToaNha, soTang, trangThai)
+VALUES
+    ('T001', 'Tòa nhà A', 5, 1),
+    ('T002', 'Tòa nhà B', 7, 1);
+
+-- Chèn dữ liệu vào bảng TangPhong
+INSERT INTO TangPhong (maPhong, maToaNha, tenPhong, viTriTang, soNguoiToiDa, gioiTinhSV, hinhThucThanhToan,donGia, trangThai)
+VALUES
+    ('P101', 'T001', 'Phòng 101', 1, 1, 'Nam', 'Theo năm',1240000,1),
+    ('P201', 'T001', 'Phòng 201', 2,2, 'Nữ', 'Theo kì',400000,1);
+
+-- Chèn dữ liệu vào bảng SinhVien
+INSERT INTO SinhVien (maSV, avatar, soDienThoai, email, hoTen, soCMND, ngaySinh, noiSinh, diaChiThuongTru, tenTruong, namVaoTruong, gioiTinh, trangThai, maGiuong)
+VALUES
+    ('SV001', 'avatar1.jpg', '1234567890', 'sv001@student.com', 'Nguyễn Văn A', '123456789', '2000-01-01', 'Hà Nội', '123 Đường XYZ', 'Đại học ABC', '2019', 'Nam', 1, 'G001'),
+    ('SV002', 'avatar2.jpg', '0987654321', 'sv002@student.com', 'Trần Thị B', '987654321', '1999-12-15', 'Hải Phòng', '456 Đường ABC', 'Đại học XYZ', '2020', 'Nữ', 1, 'G002');
+
+-- Chèn dữ liệu vào bảng Giuong
+INSERT INTO Giuong (maGiuong, maPhong, viTriGiuong, trangThai)
+VALUES
+    ('G001', 'P101', 1, 1),
+    ('G002', 'P101', 2, 1),
+    ('G003', 'P201', 1, 0),
+    ('G004', 'P201', 2, 0);
