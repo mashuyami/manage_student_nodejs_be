@@ -1,0 +1,15 @@
+
+###
+//get theo phan trang
+GET  http://localhost:5000/api/v1/building/?available[]=1&available[]=8
+###
+//get theo phan trang
+GET  http://localhost:5000/api/v1/bed/
+###
+//get theo phan trang
+GET  http://localhost:5000/api/v1/room/
+###
+//get theo phan trang
+GET  http://localhost:5000/api/v1/student/
+###
+//get theo phan trang

@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+         // lien ket khoa ngoai
+      // thang nao de khoa ngoai : belongto, foreignkey : ten khoa ngoai , targetkey : ten khoa chinh o bang role ,as : dat ten,ten dinh danh
     }
   }
   User.init({

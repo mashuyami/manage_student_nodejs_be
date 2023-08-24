@@ -2,39 +2,56 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('TangPhong', {
+    await queryInterface.createTable('Students', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      maPhong: {
+      maSV: {
         type: Sequelize.STRING
       },
-      maToaNha: {
+      maGiuong: {
         type: Sequelize.STRING
       },
-      tenPhong: {
+      hoTen: {
         type: Sequelize.STRING
       },
-      viTriTang: {
-        type: Sequelize.INTEGER
-      },
-      soNguoiToiDa: {
-        type: Sequelize.INTEGER
-      },
-      gioiTinhSV: {
-        type: Sequelize.STRING
-      },hinhThucThanhToan: {
+      avatar: {
         type: Sequelize.STRING
       },
-      donGia: {
-        type: Sequelize.FLOAT
+      email: {
+        type: Sequelize.STRING
+      },
+      soDienThoai: {
+        type: Sequelize.STRING
+      },
+      soCMND: {
+        type: Sequelize.STRING
+      },
+      ngaySinh: {
+        type: Sequelize.DATE
+      },
+      noiSinh: {
+        type: Sequelize.STRING
+      },
+      diaChiThuongTru: {
+        type: Sequelize.STRING
+      },
+      tenTruong: {
+        type: Sequelize.STRING
+      },
+      namVaoTruong :{
+        type: Sequelize.STRING
+      },
+      gioiTinh: {
+        type: Sequelize.STRING
       },
       trangThai: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,defaultValue:1
       },
+      
       createdAt: {
         allowNull: false,
         type:'TIMESTAMP',defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
@@ -46,6 +63,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('TangPhong');
+    await queryInterface.dropTable('Students');
   }
 };
